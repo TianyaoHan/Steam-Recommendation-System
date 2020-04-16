@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="post" class="form-group"> 
+    	<legend class="border-bottom mb-4">Log In</legend>
+        <label for="username" class="form-control-label">Username</label>
+        <input name="username" id="username" class="form-control form-control-lg" required>
+        <label for="password" class="form-control-label">Password</label>
+        <input type="password" name="password" class="form-control form-control-lg" id="password" required>
+        <input type="submit" value="Log In" class="btn btn-primary mt-2" >
+    </form>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+    <form method="post" class="form-group">
+		<legend class="border-bottom mb-4">Sign Up</legend>
+		<p>Take a Survey and get your Gamer Motivation Profile!</p>
+
+        <div class="row">
+	 		{% for game in games_for_rate %}
+			<div class="col-sm-3 img-thumbnail">
+				<a>{{ game['app_name'] }}</a>
+				<div>
+					<label for="inputState">rate:</label>
+					<select id="inputState" class="form-control custom-select" name="game{{ loop.index }}">
+				        <option>1</option>
+				        <option>2</option>
+				        <option>3</option>
+				        <option>4</option>
+				        <option selected>5</option>
+		        	</select>
+				</div>
+
+			</div>
+			{% endfor %}       	
+		</div>
+
+        <label for="username" class="form-control-label">Username</label>
+        <input name="username" id="username" class="form-control form-control-lg" required>
+        <label for="password" class="form-control-label">Password</label>
+        <input type="password" name="password" id="password" class="form-control form-control-lg" required>
+        <input type="submit" value="Sign Up" class="btn btn-primary mt-2">
+    </form>
+
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<p class="h1">Top results for {{ search_content }}</p>
+<div class="container">
+	<div class="row">
+		<div class="col-sm">
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item d-flex justify-content-between align-items-center">
+				</li>
+				{% for result in game_results %}
+				<li class="list-group-item"><a>{{ result[1] }}</a></li>
+				{% endfor %}	
+			</ul>
+		</div>	
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock content %}

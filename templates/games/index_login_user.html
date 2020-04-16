@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Top Picks for You: <em>{{ session['user_id'] }} </em></h1>
+<br>
+<div class="row">
+	<div class=" col-sm-4">
+		{% for game in games %}
+		<a>{{ game[1] }}</a>
+		<br>
+		{% endfor %}
+	</div>
+</div>
+<br>
+
+{% endblock content %} 

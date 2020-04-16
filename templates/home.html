@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<main role="main" class="container">
+		<h1 class="mb-4">Recommendation Engine</h1>
+		<p class="mb-4"><em>What it does?</em></p>
+		<P class = "mb-4"> Using Machine Learning To Find Your Games</p>
+		<p class='mb-4'>Python and spark are used to do various analytics. Content based and collaborative filtering are the two main models that have been used.</p>
+		<a class="btn btn-primary btn-lg" href="{{url_for('game_index')}}" role="button">Click me and try it out now</a>
+</main>
+{% endblock content %}

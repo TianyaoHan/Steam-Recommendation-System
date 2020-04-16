@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Welcome User <em>{{ session['user_id'] }} </em>!</h1>
+<a class="btn btn-primary" href="{{ url_for('game_recommendation') }}">Get Recommendation</a>
+<p> Hi! <em>{{ session['user_id'] }} </em>, recommendation engine is running and it may take about 1 min. Please be patient!</p>
+{% endblock content %}
