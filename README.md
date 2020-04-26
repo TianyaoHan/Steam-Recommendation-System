@@ -170,12 +170,6 @@ CREATE TABLE developers(
 
 <br>
 
-CREATE TRIGGER delete_bundle_id AFTER DELETE ON games
-FOR EACH ROW
-EXECUTE PROCEDURE process_delete_bundle_id();
-
-<br>
-
 CREATE OR REPLACE FUNCTION process_delete_bundle_id()
   RETURNS trigger AS
 $$
@@ -183,7 +177,7 @@ BEGIN
     DELETE FROM bundles
     WHERE bundle_id in (SELECT DISTINCT bundle_id 
                         FROM bundles
-                        WHERE game_id = orow.game_id);
+                        WHERE game_id = OLD.game_id);
     RETURN NULL;
 END;
 
@@ -191,6 +185,11 @@ $$ LANGUAGE plpgsql;
 
 <br>
 
+CREATE TRIGGER delete_bundle_id AFTER DELETE ON games
+FOR EACH ROW
+EXECUTE PROCEDURE process_delete_bundle_id();
+
+<br>
 
 ### 2.4 Recommendation Algorithm
 
