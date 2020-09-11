@@ -213,7 +213,6 @@ The general “entities” that are involved are: game, user, play, review, bund
 
 1. The designed relational database allows users to search and review games, the application should also generate personalized narrow down game-list for users to explore.
 2. The database was built on [Google Cloud Platform](https://cloud.google.com/) using [Python](https://www.python.org), [Spark](https://spark.apache.org), [Scikit-learn](https://scikit-learn.org/), [PostgreSQL](https://www.postgresql.org), and [Flask](https://flask.palletsprojects.com/).
-3. Weblink:http://35.227.83.90:8111/
 
 <br>
 
@@ -221,7 +220,7 @@ The general “entities” that are involved are: game, user, play, review, bund
 
 <br>
 
-%Part 4: We will extend the schema of Part 1 with object-relational features (ongoing).
+We extended the schema of Part 1 with object-relational features.
 
 <br>
 
