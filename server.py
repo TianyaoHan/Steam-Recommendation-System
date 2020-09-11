@@ -26,22 +26,8 @@ tmpl_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
 app = Flask(__name__, template_folder=tmpl_dir)
 app.config.update(
     TESTING=True,
-    SECRET_KEY=b'_5#y2L"F4Q8z\n\xec]/'
+    SECRET_KEY=b'_1#"J3Q8z\n\xec]/'
 )
-
-#
-# The following is a dummy URI that does not connect to a valid database. You will need to modify it to connect to your Part 2 database in order to use the data.
-#
-# XXX: The URI should be in the format of:
-#
-#     postgresql://USER:PASSWORD@35.243.220.243/proj1part2
-#
-# For example, if you had username gravano and password foobar, then the following line would be:
-#
-#     DATABASEURI = "postgresql://gravano:foobar@35.243.220.243/proj1part2"
-#
-#DATABASEURI = "postgresql://user:password@35.243.220.243/proj1part2"
-# Use the DB credentials you received by e-mail
 
 DB_USER = "xx"
 DB_PASSWORD = "xx"
@@ -103,18 +89,6 @@ def teardown_request(exception):
     pass
 
 
-#
-# @app.route is a decorator around index() that means:
-#   run index() whenever the user tries to access the "/" path using a GET request
-#
-# If you wanted the user to go to, for example, localhost:8111/foobar/ with POST or GET then you could use:
-#
-#       @app.route("/foobar/", methods=["POST", "GET"])
-#
-# PROTIP: (the trailing / in the path is important)
-#
-# see for routing: http://flask.pocoo.org/docs/0.10/quickstart/#routing
-# see for decorators: http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/
 #
 
 # home page
