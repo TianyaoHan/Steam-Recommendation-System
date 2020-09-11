@@ -257,7 +257,7 @@ All packages list below can be installed directly by pip3.
 
  - templates: web pages.
  - server.py: flask app.
- - recomAlg.py: recommendation algorithm.
+ - recomAlg.py: recommendation algorithms.
 
 <br>
 
