@@ -52,9 +52,9 @@ class content_based:
         sim_scores = list(enumerate(cosine_sim[idx]))
         # Sort the games based on the similarity scores
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-        # Get the scores of the 10 most similar movies
+        # Get the scores of the 10 most similar games
         sim_scores = sim_scores[1:11]
-        # Get the movie indices
+        # Get the games indices
         game_indices = [i[0] for i in sim_scores]
         # Return the top 10 most similar movies
         return self.data['app_name'].iloc[game_indices]
