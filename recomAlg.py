@@ -56,7 +56,7 @@ class content_based:
         sim_scores = sim_scores[1:11]
         # Get the games indices
         game_indices = [i[0] for i in sim_scores]
-        # Return the top 10 most similar movies
+        # Return the top 10 most similar games
         return self.data['app_name'].iloc[game_indices]
 
 ## get data
@@ -168,9 +168,9 @@ def get_cc_recommendations(data):
     # evaluator = RegressionEvaluator(metricName="rmse", labelCol="rating", predictionCol="prediction")
     # rmse = evaluator.evaluate(predictions)
     # print("Root-mean-square error = " + str(rmse))
-    # # Generate top 10 movie recommendations for each user
+    # # Generate top 10 games recommendations for each user
     userRecs = model.recommendForAllUsers(10)
-    #Generate top 10 user recommendations for each movie
+    #Generate top 10 user recommendations for each game
     gameRecs = model.recommendForAllItems(10)
 
     return userRecs.toPandas(), gameRecs.toPandas()
