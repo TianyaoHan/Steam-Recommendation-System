@@ -43,14 +43,14 @@ class content_based:
         tfidf_matrix = tf.fit_transform(df['feature'].fillna(''))
         # Compute the cosine similarity matrix
         cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
-        #Construct a reverse map of indices and movie titles
+        #Construct a reverse map of indices and game titles
         indices = pd.Series(self.data.index, index=self.data['app_name']).drop_duplicates()
     
-        # Get the index of the movie that matches the title
+        # Get the index of the game that matches the title
         idx = indices[name]
-        # Get the pairwsie similarity scores of all movies with that movie
+        # Get the pairwsie similarity scores of all games with that game
         sim_scores = list(enumerate(cosine_sim[idx]))
-        # Sort the movies based on the similarity scores
+        # Sort the games based on the similarity scores
         sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
         # Get the scores of the 10 most similar movies
         sim_scores = sim_scores[1:11]
